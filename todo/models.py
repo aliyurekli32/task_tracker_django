@@ -12,7 +12,7 @@ class Todo(models.Model):
     description = models.TextField(blank=True)
     priority = models.SmallIntegerField(choices=PRIORITY, default=3)
     is_done = models.BooleanField(default=False)
-    update_date = models.DateTimeField()
+    update_date = models.DateTimeField(auto_now=True)
     created_date = models.DateTimeField(auto_now_add=True)
     
     def __str__(self):
